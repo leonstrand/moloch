@@ -9,35 +9,35 @@ fi
 
 clear
 
-if [ -z $MOLOCHUSER ]; then
-	echo -n "Moloch service userid: [daemon] "
-	read MOLOCHUSER
-fi
+#if [ -z $MOLOCHUSER ]; then
+	#echo -n "Moloch service userid: [daemon] "
+	#read MOLOCHUSER
+#fi
 if [ -z $MOLOCHUSER ]; then MOLOCHUSER="daemon"; fi
 
-if [ -z $GROUPNAME ]; then
-	echo -n "Moloch service groupid: [daemon] "
-	read GROUPNAME
-fi
+#if [ -z $GROUPNAME ]; then
+	#echo -n "Moloch service groupid: [daemon] "
+	#read GROUPNAME
+#fi
 if [ -z $GROUPNAME ]; then GROUPNAME="daemon"; fi
 
-if [ -z $PASSWORD ]; then
-	echo -n "Moloch INTERNAL encryption phrase: [0mgMolochRules1] "
-	read PASSWORD
-fi
+#if [ -z $PASSWORD ]; then
+	#echo -n "Moloch INTERNAL encryption phrase: [0mgMolochRules1] "
+	#read PASSWORD
+#fi
 if [ -z $PASSWORD ]; then PASSWORD="0mgMolochRules1"; fi
 
-if [ -z $INTERFACE ]; then
-	echo -n "Moloch interface to listen on: [eth0] "
-	read INTERFACE
-fi
+#if [ -z $INTERFACE ]; then
+	#echo -n "Moloch interface to listen on: [eth0] "
+	#read INTERFACE
+#fi
 if [ -z $INTERFACE ]; then INTERFACE="eth0"; fi
 
 if [ -z $BATCHRUN ]; then 
 	echo "You are about to attempt a Moloch install (Proceed?)"
 	echo
 	echo "Hit Ctrl-C *now* to stop!   Hit enter to proceed"
-	read OK
+	#read OK
 fi
 
 chown ${MOLOCHUSER}:${GROUPNAME} ${TDIR}/raw

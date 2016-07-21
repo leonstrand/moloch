@@ -106,17 +106,17 @@ if [ "x$https_proxy" != "x" ]; then
     sleep 1
 fi
 
-if [ -z $USEPFRING ]; then
-	echo -n "Use pfring pcap bridge? ('yes' enables) [no] "
-	read USEPFRING
-fi
+#if [ -z $USEPFRING ]; then
+	#echo -n "Use pfring pcap bridge? ('yes' enables) [no] "
+	#read USEPFRING
+#fi
 PFRING=""
-if [ -n "$USEPFRING" -a "x$USEPFRING" = "xyes" ]; then 
-    echo "MOLOCH - Using pfring pcap bridge - Make sure to install the kernel modules"
-    echo "MOLOCH - versions >= 0.14 support a faster pfring plugin, see capture/plugins/pfring/README.md"
-    sleep 1
-    PFRING="--pfring"
-fi
+#if [ -n "$USEPFRING" -a "x$USEPFRING" = "xyes" ]; then 
+    #echo "MOLOCH - Using pfring pcap bridge - Make sure to install the kernel modules"
+    #echo "MOLOCH - versions >= 0.14 support a faster pfring plugin, see capture/plugins/pfring/README.md"
+    #sleep 1
+    #PFRING="--pfring"
+#fi
 
 # Building thirdparty libraries and moloch
 echo ./easybutton-build.sh --dir "$TDIR" $PFRING
@@ -232,10 +232,10 @@ fi
 
 
 
-if [ -z $ESMEM ]; then
-	echo -n "Memory to give to elasticsearch, box MUST have more then this available: [512M] "
-	read ESMEM
-fi
+#if [ -z $ESMEM ]; then
+	#echo -n "Memory to give to elasticsearch, box MUST have more then this available: [512M] "
+	#read ESMEM
+#fi
 if [ -z $ESMEM ]; then ESMEM="512M"; fi
 
 echo "MOLOCH: Copying single-host config files"
